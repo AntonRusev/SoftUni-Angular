@@ -1,0 +1,12 @@
+<p id="title">list works! {{myProp}}</p>
+
+<button (click)="handleClickEvent()">
+  <ng-container *ngIf="showAge">Hide age</ng-container>
+  <ng-container *ngIf="!showAge">Show age</ng-container>
+</button>
+
+<ul id="list-container">
+    <li *ngFor="let user of users" class="list-item">
+      <app-list-item [user]="user" [showAge]="showAge"></app-list-item>
+    </li>
+  </ul>

@@ -1,0 +1,3 @@
+<span>{{user.firstName}}</span>
+<span *ngIf="showAge; else other_content"> - {{user.age}}</span> 
+    <ng-template #other_content> - Age turned off</ng-template>
