@@ -5,8 +5,9 @@
   <ng-container *ngIf="!showAge">Show age</ng-container>
 </button>
 
+
 <ul id="list-container">
     <li *ngFor="let user of users" class="list-item">
-      <app-list-item [user]="user" [showAge]="showAge"></app-list-item>
+      <app-list-item [user]="user" [showAge]="showAge" (custonEvent)="customEventHandler($event)" ></app-list-item>
     </li>
   </ul>

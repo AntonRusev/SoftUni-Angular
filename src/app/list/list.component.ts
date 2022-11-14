@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ICustomEvent } from '../list-item/list-item.component';
 
 @Component({
   selector: 'app-list',
@@ -37,6 +38,10 @@ export class ListComponent implements OnInit {
   
   handleClickEvent() {
     this.showAge = !this.showAge;
+  }
+
+  customEventHandler($event: ICustomEvent) {
+    console.log($event)
   }
 
 }
